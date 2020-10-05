@@ -85,6 +85,23 @@ $(document).ready(function () {
         {
           offset: '50%',
         }
-      );
+    );
+
+      /* Mobile Navigation */
+
+      /* =========== MOBILE NAV=========== */
+    $('.js--nav-icon').click(function () {
+        var nav = $('.js--main-nav');
+        var icon = $('.js--nav-icon ion-icon');
+        var iconName = icon.attr('name');
+      
+        nav.slideToggle(300);
+ 
+        if (iconName === 'menu') {
+            icon.attr('name', 'close');
+        } else {
+            icon.attr('name', 'menu');
+        }
+    });
 
 });
